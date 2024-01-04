@@ -1,0 +1,91 @@
+$main-dark: #121212;
+$card-dark: #292929;
+$input-dark: #4d4d57;
+$main-light: #3164ff;
+$card-light: #fff;
+$input-light: $card-light;
+* {
+  font-family: "roboto", sans-serif;
+  transition: all 0.3s linear;
+}
+::selection {
+  background: yellow;
+  color: #3164ff;
+}
+body {
+  background: $main-dark;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: #fff;
+    text-align: center;
+  }
+  .card {
+    position: relative;
+    background: $card-dark;
+    padding: 20px;
+    border-radius: 11px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .darkmode-icon {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: rgb(255, 174, 0);
+      cursor: pointer;
+    }
+    .part {
+      padding: 10px;
+      p {
+        font-size: 25px;
+        margin-block: 0 10px;
+      }
+      input {
+        background: $input-dark;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-size: 30px;
+        border: none;
+        outline: none;
+        color: #fff;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+    }
+  }
+  &.light-mode {
+    background: $main-light;
+  }
+  .card.light-mode {
+    background: $card-light;
+    color: #000;
+    .darkmode-icon {
+      transform: rotate(257deg);
+      color: #121212;
+    }
+    input {
+      background: $input-light;
+      border: 1px solid #c2c1c1;
+      color: #000;
+      &:focus {
+        border: 1px solid $main-light;
+      }
+    }
+  }
+  .error-msg {
+    text-align: center;
+    margin-top: 1.25em;
+    color: #ff4362;
+  }
+  .light-mode-p {
+    color: #f9ff00;
+  }
+}
