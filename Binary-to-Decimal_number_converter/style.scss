@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    overflow: hidden;
     .darkmode-icon {
       position: absolute;
       top: 10px;
@@ -58,6 +59,63 @@ body {
           -webkit-appearance: none;
           margin: 0;
         }
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      animation: move 15s infinite ease-in-out;
+      span {
+        color: #ff4362;
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a {
+        text-decoration: underline;
+        color: #e6bf14;
+        margin-left: 4px;
+        -webkit-text-underline-position: under;
+        -ms-text-underline-position: below;
+        text-underline-position: under;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(168%);
+        }
+        50% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-168%);
+        }
+      }
+      body .card .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        animation: move 5s infinite;
+      }
+      body .card {
+        position: relative;
+        background: #292929;
+        padding: 20px;
+        border-radius: 11px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: hidden;
+      }
+      ::selection {
+        background: yellow;
+        color: #3164ff;
       }
     }
   }
@@ -95,6 +153,7 @@ body {
       font-size: 25px;
     }
     .card {
+      padding-bottom: 10px;
       .part {
         padding: 5px;
         input {
@@ -102,7 +161,6 @@ body {
         }
         p {
           font-size: 17px;
-          // margin-block: 0 5px;
         }
       }
     }
