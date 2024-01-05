@@ -89,3 +89,22 @@ body {
     color: #f9ff00;
   }
 }
+@media screen and (max-width: 460px) {
+  body {
+    h1 {
+      font-size: 25px;
+    }
+    .card {
+      .part {
+        padding: 5px;
+        input {
+          font-size: 20px;
+        }
+        p {
+          font-size: 17px;
+          // margin-block: 0 5px;
+        }
+      }
+    }
+  }
+}

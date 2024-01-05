@@ -88,4 +88,19 @@ body .error-msg {
 }
 body .light-mode-p {
   color: #f9ff00;
+}
+
+@media screen and (max-width: 460px) {
+  body h1 {
+    font-size: 25px;
+  }
+  body .card .part {
+    padding: 5px;
+  }
+  body .card .part input {
+    font-size: 20px;
+  }
+  body .card .part p {
+    font-size: 17px;
+  }
 }/*# sourceMappingURL=style.css.map */
