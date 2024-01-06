@@ -13,6 +13,7 @@ $input-light: $card-light;
   color: #3164ff;
 }
 body {
+  animation: popup 1s ease-in-out;
   background: $main-dark;
   height: 100vh;
   display: flex;
@@ -145,6 +146,14 @@ body {
   }
   .light-mode-p {
     color: #f9ff00;
+  }
+}
+@keyframes popup {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
 @media screen and (max-width: 460px) {
